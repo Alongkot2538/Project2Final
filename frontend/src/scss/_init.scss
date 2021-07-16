@@ -1,0 +1,42 @@
+html, body {
+    background-color: white;
+    color: #333333;
+    width: 100%;
+    font-family: 'Prompt', sans-serif;
+    @media (max-width: 767.98px) {
+        background-color: #EFEFEF;
+        padding-bottom: 30px;
+    }
+}
+h1,h2,h3,h4,h5,h6,b {
+    color: #4D4D4D;
+    font-weight: 600;
+}
+a {
+    color: #333333;
+    &:hover {
+        color: #333333;
+        text-decoration: none;
+    }
+}
+label {
+    font-weight: 500;
+    @media (max-width: 767.98px) {
+        margin-bottom: .25rem;
+    }
+}
+label.custom-control-label {
+    font-weight: 400;
+}
+.grayscale, .unactive {
+    filter: grayscale(100%);
+}
+.unactive {
+    opacity: .4;
+}
+.pointer {
+    cursor: pointer;
+}
+.disable {
+    pointer-events: none;
+}

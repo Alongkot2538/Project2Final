@@ -1,0 +1,104 @@
+@import 'init';
+@import 'color';
+@import 'until';
+@import 'layout';
+@import 'component';
+
+@import 'navbar';
+@import 'auth';
+
+.main-slide {
+    .carousel {
+        &-indicators {
+            li {
+                background-color: white;
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                &.active {
+                    background-color: $cl_orange;
+                }
+            }
+        }
+        &-item {
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                min-height: 280px;
+            }
+        }
+        &-caption {
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            width: 30%;
+            text-align: left;
+            transform: translateY(-50%);
+            h4 {
+                font-weight: 300;
+            }
+            @media (max-width: 991.98px) {
+                width: 50%;
+                h4 {
+                    font-size: 1.15rem;
+                }
+            }
+            @media (max-width: 767.98px) {
+                transform: translateY(-80%);
+                h2 {
+                    font-size: 1.5rem;
+                }
+                h4 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+.vender-banner {
+    background-image: url('../images/home/regis_vender.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 100px 20px;
+    border-radius: 15px;
+    h1 {
+        color: #fff;
+    }
+    @media (min-width: 992px) {
+        padding: 150px 50px;
+    }
+    @media (max-width: 767.98px) {
+        padding: 30px 10px;
+        border-radius: 5px;
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
+.pagination {
+    .page-item {
+        .page-link {
+            color: #666666;
+        }
+        &.active .page-link {
+            background-color: $cl_blue;
+            color: #fff;
+            border-color: $cl_blue;
+        }
+    }
+}
+.thb-end {
+    position: relative;
+    &:after {
+        content: 'บาท';
+        position: absolute;
+        top: .45rem;
+        right: .75rem;
+        font-size: .9rem;
+        z-index: 1;
+    }
+}
+
